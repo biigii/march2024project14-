@@ -7,81 +7,51 @@ body {
   height: 100%;
 }
 
-header,
-aside,
-section,
-main,
-article,
-header,
-footer {
-  font-size: 3em;
-  text-transform: capitalize;
-  color: #fff;
+div {
+  background-color: #ef2d2d;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-header {
-  grid-area: header;
-  background-color: #e76565;
-}
-
-aside {
-  grid-area: aside;
-  background-color: #23f20c;
-}
-
-main {
-  grid-area: main;
-  background-color: #23cfee;
+  color: #fff;
+  font-size: 3em;
 }
 
 section {
-  grid-area: section;
-  background-color: #c21ef0;
-}
-
-article {
-  grid-area: article;
-  background-color: #ecf00d;
-}
-
-footer {
-  grid-area: footer;
-  background-color: #f92323;
-}
-
-.home {
   height: 100%;
   display: grid;
-  gap: 5px;
+  gap: 10px;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  justify-content: center;
+  align-content: center;
+  grid-auto-flow: row;
+  grid-auto-rows: 100px;
 }
-@media (min-width: 1800px) {
-  .home {
-    grid-template-columns: 250px 1fr 1fr 1fr;
-    grid-template-rows: 120px 1fr 150px;
-    grid-template-areas: "aside header header header" "aside main section article" "aside footer footer footer";
-  }
+section div:first-child {
+  background-color: #1fe29e;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
-@media (max-width: 1800px) and (min-width: 1000px) {
-  .home {
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 120px 1fr 3fr 150px;
-    grid-template-areas: "header header header" "aside aside aside" "article main section" "footer footer footer";
-  }
+section div:nth-child(2) {
+  background-color: #ba12e3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
-@media (max-width: 1000px) and (min-width: 600px) {
-  .home {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 120px 1fr 1fr 1fr 150px;
-    grid-template-areas: "header header" "aside main" "section article" "section article" "footer footer";
-  }
+section div:nth-child(5) {
+  background-color: #097df1;
+  grid-column: span 2;
+  grid-row: span 2;
 }
-@media (max-width: 600px) {
-  .home {
-    grid-template-columns: 1fr;
-    grid-template-rows: 120px 1fr 1fr 1fr 1fr 150px;
-    grid-template-areas: "header" "aside" "main" "section" "article" "footer";
-  }
+section div:nth-child(8) {
+  background-color: #000;
+  grid-row: 5/7;
+}
+section div:nth-child(9) {
+  background-color: #f1950c;
+  grid-column: 2/4;
+  grid-row: 5/7;
 }/*# sourceMappingURL=main.css.map */
