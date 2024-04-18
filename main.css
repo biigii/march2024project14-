@@ -7,51 +7,24 @@ body {
   height: 100%;
 }
 
-div {
-  background-color: #ef2d2d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-size: 3em;
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-section {
-  height: 100%;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
-  justify-content: center;
-  align-content: center;
-  grid-auto-flow: row;
-  grid-auto-rows: 100px;
+input {
+  height: 40px;
 }
-section div:first-child {
-  background-color: #1fe29e;
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
+
+form {
+  margin-top: 50px;
 }
-section div:nth-child(2) {
-  background-color: #ba12e3;
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-}
-section div:nth-child(5) {
-  background-color: #097df1;
-  grid-column: span 2;
-  grid-row: span 2;
-}
-section div:nth-child(8) {
-  background-color: #000;
-  grid-row: 5/7;
-}
-section div:nth-child(9) {
-  background-color: #f1950c;
-  grid-column: 2/4;
-  grid-row: 5/7;
+
+button {
+  width: 100px;
+  height: 40px;
+  background-color: #fd530a;
+  color: #fff;
+  border: none;
 }/*# sourceMappingURL=main.css.map */
